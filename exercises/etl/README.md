@@ -1,67 +1,34 @@
-# ETL
+# Etl
 
-We are going to do the `Transform` step of an Extract-Transform-Load.
+ETL 은 어떤 데이터 소스로부터 데이터를 추출해 적절한 포멧으로 변환하여 다른 시스템에서 이용할 수 있도록 해 주는 과정을 이른다. 추출Extract - 변환Transform - 적재Load 의 세 과정으로 구성된다.
 
-### ETL
+우리는 이 중에서 '변환' 과정을 연습해 보자.
 
-Extract-Transform-Load (ETL) is a fancy way of saying, "We have some crufty, legacy data over in this system, and now we need it in this shiny new system over here, so
-we're going to migrate this."
+변환하고자 하는 방식은 다음과 같다.
 
-(Typically, this is followed by, "We're only going to need to run this
-once." That's then typically followed by much forehead slapping and
-moaning about how stupid we could possibly be.)
+각 알파벳에 점수를 부여하는 시스템이 있다고 해 보자. 기존의 시스템은 각 알파벳에 대한 점수를 다음과 같이 저장했다.
 
-### The goal
+- 1 점: "A", "E", "I", "O", "U", "L", "N", "R", "S", "T",
+- 2 점: "D", "G",
+- 3 점: "B", "C", "M", "P",
+- 4 점: "F", "H", "V", "W", "Y",
+- 5 점: "K",
+- 8 점: "J", "X",
+- 10 점: "Q", "Z",
 
-We're going to extract some scrabble scores from a legacy system.
+새로운 시스템에서는, 점수를 계산하는 것을 더 빠르고 쉽게 하기 위하여, 각 알파벳들에 대응하는 점수들을 모두 따로 저장하려고 한다. 또한 알파벳을 소문자로 저장할 것이다. 그러면 아래와 같은 형태가 될 것이다.
 
-The old system stored a list of letters per score:
+- "a" 는 1점.
+- "b" 는 3점.
+- "c" 는 3점.
+- "d" 는 2점.
+- "e" 는 1점.
+- 등등.
 
-- 1 point: "A", "E", "I", "O", "U", "L", "N", "R", "S", "T",
-- 2 points: "D", "G",
-- 3 points: "B", "C", "M", "P",
-- 4 points: "F", "H", "V", "W", "Y",
-- 5 points: "K",
-- 8 points: "J", "X",
-- 10 points: "Q", "Z",
+이와 같은 방식으로 변환하고자 할 때, 주어진 원래의 알파벳과 점수 데이터 포멧을 새로운 포멧으로 변환하는 클래스를 작성하라.
 
-The shiny new scrabble system instead stores the score per letter, which
-makes it much faster and easier to calculate the score for a word. It
-also stores the letters in lower-case regardless of the case of the
-input letters:
+## Input 
 
-- "a" is worth 1 point.
-- "b" is worth 3 points.
-- "c" is worth 3 points.
-- "d" is worth 2 points.
-- Etc.
-
-Your mission, should you choose to accept it, is to transform the legacy data
-format to the shiny new format.
-
-### Notes
-
-A final note about scoring, Scrabble is played around the world in a
-variety of languages, each with its own unique scoring table. For
-example, an "E" is scored at 2 in the Māori-language version of the
-game while being scored at 4 in the Hawaiian-language version.
-
-## Setup
-
-Go through the project setup instructions for Xcode using Swift:
-
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+## Output
 
 ## Source
-
-The Jumpstart Lab team [http://jumpstartlab.com](http://jumpstartlab.com)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.

@@ -1,24 +1,13 @@
 # Bracket Push
 
-Given a string containing brackets `[]`, braces `{}` and parentheses `()`,
-verify that all the pairs are matched and nested correctly.
+소괄호, 중괄호, 대괄호는 열렸으면 반드시 닫혀야 한다.
 
-## Setup
+이를테면 "{[]}" 는 제대로 각각 쌍을 이루었지만 "{[)][]}" 는 그렇지 않다.
 
-Go through the project setup instructions for Xcode using Swift:
+어떤 문자열에서 열린 소괄호, 중괄호, 대괄호들이 각각 제대로 닫혔는지 검사하는 함수를 작성하라.
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+## Input
 
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+## Output
 
 ## Source
-
-Ginna Baker
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.

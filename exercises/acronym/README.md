@@ -1,28 +1,54 @@
 # Acronym
 
-Convert a phrase to its acronym.
+긴 문자열을 그 이니셜만 모아 두문자어로 만들어주는 클래스를 작성하라.
+예를 들어, 
 
-Techies love their TLA (Three Letter Acronyms)!
+```
+"Portable Network Graphics"
+```
 
-Help generate some jargon by writing a program that converts a long name
-like Portable Network Graphics to its acronym (PNG).
+는,
 
-## Setup
+```
+"PNG"
+```
 
-Go through the project setup instructions for Xcode using Swift:
+로 바꾸어 준다.
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+이때 주의할 점은, 하이픈( - ) 으로 연결된 단어도 분리된 것으로 본다.
 
-Notably from the source directory:
+예를 들어
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+```
+"Water-to-Market"
+```
 
+은
+
+```
+"WTM"
+```
+
+이 된다.
+
+## Structure
+
+Acronym 클래스를 작성한다.
+
+다음 함수를 구현한다.
+
+```
+class func abbreviate(_ source:String) -> String
+```
+
+source 로 원본 문자열을 전달받고, 두문자어로 축약된 문자열을 반환한다.
 
 ## Source
 
-Julien Vanier [https://github.com/monkbroc](https://github.com/monkbroc)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+```
+class Acronym {
+    class func abbreviate(_ source:String) -> String {
+        /* write your code here */
+    }
+}
+```

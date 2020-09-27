@@ -1,42 +1,30 @@
 # Binary Search Tree
 
-Insert and search for numbers in a binary tree.
+Binary search tree 를 만들고, 그 안에 숫자를 집어넣고 검색해 보자.
 
-When we need to represent sorted data, an array does not make a good
-data structure.
+우리가 정렬된 데이터 구조를 이용할 필요가 있을 때, 단순한 배열은 좋은 방법이 아니다.
 
-Say we have the array `[1, 3, 4, 5]`, and we add 2 to it so it becomes
-`[1, 3, 4, 5, 2]` now we must sort the entire array again! We can
-improve on this by realizing that we only need to make space for the new
-item `[1, nil, 3, 4, 5]`, and then adding the item in the space we
-added. But this still requires us to shift many elements down by one.
+그 이유는 다음과 같다. 예를 들어 [1, 3, 4, 5] 와 같은 배열이 있다고 하자. 만약 여기에 2를 추가한다면 이 배열은 [1, 3, 4, 5, 2] 가 되므로, 오름차순이 되도록 다시 정렬해주는 과정을 거쳐야만 한다. 이는 매우 비효율적이다.
 
-Binary Search Trees, however, can operate on sorted data much more
-efficiently.
+그러나 binary search tree 구조를 이용한다면, 이 과정을 훨씬 효율적으로 바꿀 수 있다.
 
-A binary search tree consists of a series of connected nodes. Each node
-contains a piece of data (e.g. the number 3), a variable named `left`,
-and a variable named `right`. The `left` and `right` variables point at
-`nil`, or other nodes. Since these other nodes in turn have other nodes
-beneath them, we say that the left and right variables are pointing at
-subtrees. All data in the left subtree is less than or equal to the
-current node's data, and all data in the right subtree is greater than
-the current node's data.
+Binary search tree 는 node 들의 연결로 구성되어 있다. Node 란 하나의 데이터, 그리고 'left' 와 'right' 라는 변수로 구성된 하나의 객체이다. left 와 right 는 각각 또다른 node 를 저장하거나 비어있을 수도 있다.
 
-For example, if we had a node containing the data 4, and we added the
-data 2, our tree would look like this:
+이때 제약조건이 있다. left 에 연결되는 node 의 데이터는 자기 자신의 데이터보다 작거나 같아야 하고, right 에 연결되는 node 의 데이터는 더 커야 한다.
+
+예를 들어 보자. 2와 4의 값을 저장하기 위한 binary search tree 는 아래와 같다.
 
       4
      /
     2
 
-If we then added 6, it would look like this:
+여기에 6을 더해 보자. 4보다 크므로, 4의 right 에 연결된다.
 
       4
      / \
     2   6
 
-If we then added 3, it would look like this
+이제 3을 더하는 것을 생각해 보자. 먼저, 4보다는 작으므로 왼쪽으로 간다. 그러나 2보다는 크므로, 2의 right 에 연결된다.
 
        4
      /   \
@@ -44,7 +32,7 @@ If we then added 3, it would look like this
      \
       3
 
-And if we then added 1, 5, and 7, it would look like this
+마찬가지 방법으로 1, 5, 7을 더하면 아래와 같은 구조가 된다.
 
           4
         /   \
@@ -53,22 +41,12 @@ And if we then added 1, 5, and 7, it would look like this
      / \     / \
     1   3   5   7
 
-## Setup
+Binary search tree 구조에 따라 데이터를 삽입하고 데이터를 찾을 수 있는 클래스를 작성하라.
 
-Go through the project setup instructions for Xcode using Swift:
+## Input
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+## Output
 
 ## Source
 
-Josh Cheek [https://twitter.com/josh_cheek](https://twitter.com/josh_cheek)
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.

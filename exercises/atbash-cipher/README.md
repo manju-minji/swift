@@ -1,49 +1,27 @@
 # Atbash Cipher
 
-Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.
+Atbash Cipher 로 알려진 중동에서 사용되었던 고대의 암호화 기법이 있다.
 
-The Atbash cipher is a simple substitution cipher that relies on
-transposing all the letters in the alphabet such that the resulting
-alphabet is backwards. The first letter is replaced with the last
-letter, the second with the second-last, and so on.
+Atbash Cipher 기법은 다음과 같다.
 
-An Atbash cipher for the Latin alphabet would be as follows:
+a 는 첫번째 알파벳이므로 마지막 알파벳인 z 로 바꾼다. b 는 두번째 알파벳이므로 마지막에서 두번째 알파벳인 y 로 바꾼다.
+마찬가지 방법으로 어떠한 알파벳을 반대 순서의 다른 알파벳으로 모두 바꿔 준다.
 
-```text
-Plain:  abcdefghijklmnopqrstuvwxyz
-Cipher: zyxwvutsrqponmlkjihgfedcba
-```
+원래 문자열 순 : abcdefghijklmnopqrstuvwxyz
+암호화 문자열 순 : zyxwvutsrqponmlkjihgfedcba
 
-It is a very weak cipher because it only has one possible key, and it is
-a simple monoalphabetic substitution cipher. However, this may not have
-been an issue in the cipher's time.
+예를 들어, 아래처럼 암호화 할 수 있다.
 
-Ciphertext is written out in groups of fixed length, the traditional group size
-being 5 letters, and punctuation is excluded. This is to make it harder to guess
-things based on word boundaries.
+'test' -> 'gvhg'
+'The quick brown fox jumps over the lazy dog.' -> 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'
 
-## Examples
+암호화된 정보는 해독하기 어렵도록 원래 문장과는 상관없이 5글자씩 묶어 표시한다.
 
-- Encoding `test` gives `gvhg`
-- Decoding `gvhg` gives `test`
-- Decoding `gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt` gives `thequickbrownfoxjumpsoverthelazydog`
+어떤 문자열이 주어졌을 때, Atbash Cipher 기법으로 암호화된 문자열을 반환하는 함수를 작성하라.
 
-## Setup
+## Input
 
-Go through the project setup instructions for Xcode using Swift:
-
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+## Output
 
 ## Source
 
-Wikipedia [http://en.wikipedia.org/wiki/Atbash](http://en.wikipedia.org/wiki/Atbash)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.

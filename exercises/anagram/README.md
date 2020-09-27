@@ -1,27 +1,12 @@
 # Anagram
 
-Given a word and a list of possible anagrams, select the correct sublist.
+어떤 단어에 대해, 그 단어의 글자 순서만 뒤바꿔 만든 다른 단어를 Anagram 이라고 한다.
 
-Given `"listen"` and a list of candidates like `"enlists" "google"
-"inlets" "banana"` the program should return a list containing
-`"inlets"`.
+한 단어가 주어졌을 때, 함께 주어진 다른 단어들의 목록 중 그 단어의 Anagram 들을 찾아 반환하는 함수를 작성하라.
 
-## Setup
+## Input
 
-Go through the project setup instructions for Xcode using Swift:
-
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+## Output
 
 ## Source
 
-Inspired by the Extreme Startup game [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.

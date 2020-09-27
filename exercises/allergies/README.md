@@ -1,50 +1,38 @@
 # Allergies
 
-Given a person's allergy score, determine whether or not they're allergic to a given item, and their full list of allergies.
+8가지 아이템에 대한 알레르기 점수가 주어진다.
 
-An allergy test produces a single numeric score which contains the
-information about all the allergies the person has (that they were
-tested for).
+* 달걀 (1)
+* 땅콩 (2)
+* 조개류 (4)
+* 딸기 (8)
+* 토마토 (16)
+* 초콜릿 (32)
+* 꽃가루 (64)
+* 고양이 (128)
 
-The list of items (and their value) that were tested are:
+이때, 어떤 사람의 알레르기 점수는, 이 사람이 알레르기가 있는 아이템들의 점수를 모두 더한 값이다.
+예를 들어, 이 사람이 땅콩과 초콜렛에 알레르기가 있다면 이 사람의 알레르기 점수는 34점이다.
 
-* eggs (1)
-* peanuts (2)
-* shellfish (4)
-* strawberries (8)
-* tomatoes (16)
-* chocolate (32)
-* pollen (64)
-* cats (128)
+이제, 어떤 사람의 알레르기 점수만 알고 있다고 하자.
+그렇다면 거꾸로 그 점수를 통해 어떤 아이템들에 알레르기가 있는지를 알아낼 수 있다.
 
-So if Tom is allergic to peanuts and chocolate, he gets a score of 34.
+예를 들어 어떤 사람의 알레르기 점수가 7점이라면, 가능한 경우의 수는 1 + 2 + 4, 즉 달걀과 땅콩과 조개류 뿐이다.
+즉 이 사람은 달걀과 땅콩과 조개류에 알레르기가 있다.
 
-Now, given just that score of 34, your program should be able to say:
-
-- Whether Tom is allergic to any one of those allergens listed above.
-- All the allergens Tom is allergic to.
-
-Note: a given score may include allergens **not** listed above (i.e.
-allergens that score 256, 512, 1024, etc.).  Your program should
-ignore those components of the score.  For example, if the allergy
-score is 257, your program should only report the eggs (1) allergy.
+어떤 사람의 알레르기 점수를 통해 어떤 아이템에 알레르기가 있는지 알아내고,
+주어진 아이템에 대해 알레르기가 있는지 없는지를 판별하는 함수를 작성하라.
 
 ## Setup
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 Jumpstart Lab Warm-up [http://jumpstartlab.com](http://jumpstartlab.com)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

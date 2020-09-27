@@ -1,32 +1,28 @@
 # Crypto Square
 
-Implement the classic method for composing secret messages called a square code.
+Square code 라고 불리는 오래된 암호화 기법이 있다.
 
-Given an English text, output the encoded version of that text.
+영어로 된 문자열을 암호화한다. 먼저 문자열을 정규화한다. 모든 공백, 특수문자를 제거하고, 모든 글자는 소문자로 바꾼다.
 
-First, the input is normalized: the spaces and punctuation are removed
-from the English text and the message is downcased.
+그 다음, 그 문자열을 같은 글자수만큼을 가진 여러 행으로 쪼갠다. 그러면 글자들이 직사각형 모양으로 배치될 것이다.
 
-Then, the normalized characters are broken into rows.  These rows can be
-regarded as forming a rectangle when printed with intervening newlines.
+이때, (행의 수) <= (열의 수), 그리고 (열의 수) - (행의 수) <= 1 를 만족하도록 쪼개져야 한다.
 
-For example, the sentence
+예를 들어 다음과 같은 문자열이 주어졌다고 하자.
 
-> If man was meant to stay on the ground, god would have given us roots.
+```plain
+If man was meant to stay on the ground, god would have given us roots.
+```
 
-is normalized to:
+이를 다음과 같이 정규화한다.
 
-> ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots
+```plain
+ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots
+```
 
-The plaintext should be organized in to a rectangle.  The size of the
-rectangle (`r x c`) should be decided by the length of the message,
-such that `c >= r` and `c - r <= 1`, where `c` is the number of columns
-and `r` is the number of rows.
+이제 이를 여러 행으로 쪼개 정사각형 모양으로 만든다. 주어진 조건에 따르면 행의 수는 7, 열의 수는 8이 되어야 한다. 즉,
 
-Our normalized text is 54 characters long, dictating a rectangle with
-`c = 8` and `r = 7`:
-
-```text
+```plain
 ifmanwas
 meanttos
 tayonthe
@@ -36,29 +32,25 @@ vegivenu
 sroots
 ```
 
-The coded message is obtained by reading down the columns going left to
-right.
+이와 같이 배치된다.
 
-The message above is coded as:
+이제 이 사각형에서 가장 왼쪽에 있는 열부터 차례로 써서 아래처럼 만든다.
 
-```text
+```plain
 imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau
 ```
 
-Output the encoded text in chunks.  Phrases that fill perfect rectangles
-`(r X c)` should be output `c` chunks of `r` length, separated by spaces.
-Phrases that do not fill perfect rectangles will have `n` empty spaces.
-Those spaces should be distributed evenly, added to the end of the last
-`n` chunks.
+그러면 해당 문자열은 암호화된 것이다.
 
-```text
-imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau 
+암호를 다시 해독하기 위해서는 같은 과정을 거치면 된다. 다음과 같이 7글자씩 8조각으로 나눠 정규화하고,
+
+```plain
+imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau
 ```
 
-Notice that were we to stack these, we could visually decode the
-cyphertext back in to the original message:
+다시 행의 수는 8, 열의 수는 7인 사각형으로 만든 후
 
-```text
+```plain
 imtgdvs
 fearwer
 mayoogo
@@ -69,22 +61,12 @@ aohghn
 sseoau
 ```
 
-## Setup
+가장 왼쪽 열부터 위에서 아래로 차례대로 읽어 주면 된다.
 
-Go through the project setup instructions for Xcode using Swift:
+주어진 문자열을 암호화하고, 또한 다시 복호화하기 위한 정규화를 하는 클래스를 작성하라.
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+## Input
 
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+## Output
 
 ## Source
-
-J Dalbey's Programming Practice problems [http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html](http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.

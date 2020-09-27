@@ -1,27 +1,16 @@
 # Clock
 
-Implement a clock that handles times without dates.
+날짜는 표시하지 않는, 시간과 분만 표시하는 시계를 만든다.
 
-You should be able to add and subtract minutes to it.
+기본 시간은 0시 0분이고, 시간과 분을 각각 더하고 뺄 수 있다. 
 
-Two clocks that represent the same time should be equal to each other.
+예를 들어 11시간 9분을 더하면 11:09, 25시간을 더하면 01:00, 72시간 8640분을 더하면 00:00 이 된다.
 
-## Setup
+이와 같이 더하거나 빼진 시간과 분에 대해 시각을 표시해주는 시계 클래스를 작성하라.
 
-Go through the project setup instructions for Xcode using Swift:
+## Input
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+## Output
 
 ## Source
 
-Pairing session with Erin Drummond [https://twitter.com/ebdrummond](https://twitter.com/ebdrummond)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.

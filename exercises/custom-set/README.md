@@ -1,24 +1,26 @@
 # Custom Set
 
-Create a custom set type.
+사용자 정의 집합(Set) 자료형을 만들어 보자.
 
-Sometimes it is necessary to define a custom data structure of some
-type, like a set. In this exercise you will define your own set. How it
-works internally doesn't matter, as long as it behaves like a set of
-unique elements.
+어떤 집합이 주어졌을 때, 다음과 같은 연산들을 수행할 수 있는 클래스를 작성하라.
 
-## Setup
+1. 집합 요소 삭제
+2. 다른 집합과의 합집합, 차집합, 교집합 연산
+3. 다른 집합과의 교집합이 공집합인지의 여부 판단
+4. 집합 요소 검색
+5. 집합 요소 삽입
+6. 집합 크기 계산
+7. 다른 집합이 부분집합인지의 여부 판단
+8. 집합 요소들을 오름차순으로 정렬된 배열로 반환
 
-Go through the project setup instructions for Xcode using Swift:
+## Caution
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+집합 자료형이므로, 중복된 요소는 2개 이상 들어갈 수 없다.
 
-Notably from the source directory:
+요소의 순서에 상관없는 자료형이어야 한다. 즉, 순서에 상관없이 같은 요소들을 포함하고 있다면 같은 집합이다.
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+## Input
 
+## Output
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+## Source

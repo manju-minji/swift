@@ -1,48 +1,17 @@
 # All Your Base
 
-Convert a number, represented as a sequence of digits in one base, to any other base.
+주어진 수에 대한 진수 변환을 해주는 함수를 만든다.
 
-Implement general base conversion. Given a number in base **a**,
-represented as a sequence of digits, convert it to base **b**.
+변환할 수가 주어지고, 변환 전의 진수, 변환 후의 진수를 매개변수로 전달한다. 변환된 결과값을 반환한다.
 
-## Note
+변환 전의 진수와 변환 후의 진수는 Int 로 전달한다.
 
-- Try to implement the conversion yourself.
-  Do not use something else to perform the conversion for you.
+변환할 수는 각 자리 수를 Int 의 배열로 만들어 전달한다.
 
-## About [Positional Notation](https://en.wikipedia.org/wiki/Positional_notation)
+예를 들어 2진수의 수 101100 의 경우,
 
-In positional notation, a number in base **b** can be understood as a linear
-combination of powers of **b**.
+[1,0,1,1,0,0] 
 
-The number 42, *in base 10*, means:
+의 형태로 전달한다.
 
-(4 * 10^1) + (2 * 10^0)
-
-The number 101010, *in base 2*, means:
-
-(1 * 2^5) + (0 * 2^4) + (1 * 2^3) + (0 * 2^2) + (1 * 2^1) + (0 * 2^0)
-
-The number 1120, *in base 3*, means:
-
-(1 * 3^3) + (1 * 3^2) + (2 * 3^1) + (0 * 3^0)
-
-I think you got the idea!
-
-*Yes. Those three numbers above are exactly the same. Congratulations!*
-
-## Setup
-
-Go through the project setup instructions for Xcode using Swift:
-
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+변환된 수도 마찬가지로 Int 의 배열로 반환받는다.

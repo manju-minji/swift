@@ -1,31 +1,30 @@
 # Dominoes
 
-Make a chain of dominoes.
+도미노 체인을 만들어 보자.
 
-Compute a way to order a given set of dominoes in such a way that they form a
-correct domino chain (the dots on one half of a stone match the dots on the
-neighbouring half of an adjacent stone) and that dots on the halfs of the stones
-which don't have a neighbour (the first and last stone) match each other.
+도미노 체인이란 다음과 같다. 도미노의 한쪽 면에 새겨진 숫자가 이웃한 다른 도미노의 면에 새겨진 숫자와 같도록 배치하는 것이다.
 
-For example given the stones `[2|1]`, `[2|3]` and `[1|3]` you should compute something
-like `[1|2] [2|3] [3|1]` or `[3|2] [2|1] [1|3]` or `[1|3] [3|2] [2|1]` etc, where the first and last numbers are the same.
+예를 들어 보자. '21' 이라는 도미노가 주어지면 이는 그 도미노의 두 면에 각각 2와 1이 새겨져 있음을 의미한다고 하자. 이때 '21', '23', 그리고 '13' 이라는 세 개의 도미노가 주어졌다고 하자.
 
-For stones `[1|2]`, `[4|1]` and `[2|3]` the resulting chain is not valid: `[4|1] [1|2] [2|3]`'s first and last numbers are not the same. 4 != 3
+그러면 가능한 도미노 체인은
 
-Some test cases may use duplicate stones in a chain solution, assume that multiple Domino sets are being used.
+'12 23 31', '32 21 13', '13 32 21' 
 
-## Setup
+이 된다.
 
-Go through the project setup instructions for Xcode using Swift:
+이때 유의해야 할 것은 도미노 체인의 첫번째 숫자와 마지막 숫자 또한 인접한 것으로 보아 같아야 한다는 것이다.
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+예를 들어, '12', '41', '23' 세 개의 도미노가 주어졌을 때, 이를
 
-Notably from the source directory:
+'41 12 23'
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+의 도미노 체인으로 만들면, 가장 앞의 4와 가장 뒤의 3이 일치하지 않으므로, 유효하지 않다.
+
+주어지는 도미노들에 대해, 가능한 모든 도미노 체인을 찾아낼 수 있는 클래스를 작성하라.
+
+##Input
+
+##Output
 
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+## Source

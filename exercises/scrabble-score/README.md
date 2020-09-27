@@ -6,7 +6,7 @@ Given a word, compute the scrabble score for that word.
 
 You'll need these:
 
-```text
+```plain
 Letter                           Value
 A, E, I, O, U, L, N, R, S, T       1
 D, G                               2
@@ -18,7 +18,6 @@ Q, Z                               10
 ```
 
 ## Examples
-
 "cabbage" should be scored as worth 14 points:
 
 - 3 points for C
@@ -35,26 +34,19 @@ And to total:
 - = 14
 
 ## Extensions
-
-- You can play a double or a triple letter.
-- You can play a double or a triple word.
+- You can play a `:double` or a `:triple` letter.
+- You can play a `:double` or a `:triple` word.
 
 ## Setup
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 Inspired by the Extreme Startup game [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

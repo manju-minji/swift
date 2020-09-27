@@ -12,6 +12,7 @@ Evaluates to 18.
 
 Handle large numbers and negative numbers.
 
+
 ## Iteration 2 — Subtraction, Multiplication and Division
 
 Now, perform the other three operations.
@@ -28,6 +29,7 @@ Now, perform the other three operations.
 
 5
 
+
 ## Iteration 3 — Multiple Operations
 
 Handle a set of operations, in sequence.
@@ -39,9 +41,10 @@ left-to-right, _ignoring the typical order of operations._
 
 24
 
-> What is 3 plus 2 multiplied by 3?
+> What is 3 plus 2 times 3?
 
 15  (i.e. not 9)
+
 
 ## Bonus — Exponentials
 
@@ -51,22 +54,17 @@ If you'd like, handle exponentials.
 
 32
 
+
 ## Setup
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 Inspired by one of the generated questions in the Extreme Startup game. [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

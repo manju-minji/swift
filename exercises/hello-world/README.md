@@ -1,42 +1,50 @@
 # Hello World
 
-The classical introductory exercise. Just say "Hello, World!".
+"Hello, World!" 프로그램을 만들어 보자.
 
-["Hello, World!"](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program) is
-the traditional first program for beginning programming in a new language
-or environment.
+    "Hello, World!" 
 
-The objectives are simple:
+를 출력하되, 어떤 이름이 주어지면 그 이름에 대해 인사를 하는 클래스를 작성하라. 예를 들어 
 
-- Write a function which takes a name, say Alice, and returns the string with the given name, in this case "Hello, Alice!". If no name is passed in, then the function returns the string "Hello, World!". The function should be named `hello`.
-- Run the test suite and make sure that it succeeds.
-- Submit your solution and check it at the website.
+    "Bob" 
 
-If everything goes well, you will be ready to fetch your first real exercise.
+이라는 이름이 주어지면 
 
+    "Hello, Bob!" 
 
-## Hint
-Check out the test cases and expected results in `HelloWorldTests.swift`. Here are some test examples.
+을 출력한다.
 
-- Calling `hello()` returns `"Hello, World!"`
-- Calling `hello("Alice")` returns `"Hello, Alice!"`
+## Structure
 
-## Setup
+HelloWorld 클래스를 작성한다.
 
-Go through the project setup instructions for Xcode using Swift:
+다음 함수들을 구현한다.
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+    class func hello(_ name: String?) -> String 
 
-Notably from the source directory:
+name 으로 이름을 전달받으면
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+    "Hello, <name>!"
 
+의 문자열을 반환한다.
+
+    class func hello() -> String 
+
+실행하면 
+
+    "Hello, World!"
+
+의 문자열을 반환한다.
 
 ## Source
 
-This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
+    class HelloWorld {
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+        class func hello(_ name: String) -> String {
+            /* write your code here */
+        }
+
+        class func hello() -> String {
+            /* write your code here */
+        }
+    }

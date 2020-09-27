@@ -21,18 +21,12 @@ Convert a number to a string, the contents of which depend on the number's facto
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 A variation on a famous interview question intended to weed out potential candidates. [http://jumpstartlab.com](http://jumpstartlab.com)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

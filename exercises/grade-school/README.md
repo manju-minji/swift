@@ -1,55 +1,62 @@
 # Grade School
 
-Given students' names along with the grade that they are in, create a roster
-for the school.
+학생들의 이름과 그들의 성적이 주어질 때, 그에 따라 명단을 작성해 보자.
 
-In the end, you should be able to:
+다음의 기능을 가진 클래스를 작성하라.
 
-- Add a student's name to the roster for a grade
-  - "Add Jim to grade 2."
-  - "OK."
-- Get a list of all students enrolled in a grade
-  - "Which students are in grade 2?"
-  - "We've only got Jim just now."
-- Get a sorted list of all students in all grades.  Grades should sort
-  as 1, 2, 3, etc., and students within a grade should be sorted
-  alphabetically by name.
-  - "Who all is enrolled in school right now?"
-  - "Grade 1: Anna, Barb, and Charlie. Grade 2: Alex, Peter, and Zoe.
-    Grade 3…"
+* 어떤 학생의 성적을 이름과 점수를 묶어 등록. 같은 점수를 가진 학생들은 하나로 묶어 등록.
+* 어떤 점수를 가진 학생들의 전체 목록을 반환
+* 전체 학생 목록을 정렬하여 반환. 이때, 점수는 오름차순으로 정렬하고, 각 점수 내에서 여러 학생이 있는 경우 이름을 알파벳 순으로 정렬.
 
-Note that all our students only have one name.  (It's a small town, what
-do you want?)
+## Structure
 
-## For bonus points
+GradeSchool 클래스를 작성한다.
 
-Did you get the tests passing and the code clean? If you want to, these
-are some additional things you could try:
+다음 프로퍼티를 구현한다.
 
-- If you're working in a language with mutable data structures and your
-  implementation allows outside code to mutate the school's internal DB
-  directly, see if you can prevent this. Feel free to introduce additional
-  tests.
+```
+var sortedRoster: [Int:[String]]
+```
 
-Then please share your thoughts in a comment on the submission. Did this
-experiment make the code better? Worse? Did you learn anything from it?
+정렬된 전체 학생 목록을 반환한다. key 로 학생 점수, value 로 그 점수대 학생들의 이름을 가진다.
 
-## Setup
+다음 함수들을 구현한다.
 
-Go through the project setup instructions for Xcode using Swift:
+```
+func addStudent(_ name: String, grade: Int)
+```
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+목록에 학생을 추가한다. name 은 학생의 이름, grade 는 학생의 점수이다.
 
-Notably from the source directory:
+```
+func studentInGrade(_ grade: Int) -> [String]
+```
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+grade 로 어떤 점수를 전달받으면, 그 점수에 해당하는 학생들의 이름을 배열로 반환한다.
 
+## Caution
+
+같은 이름을 가진 다른 학생은 없다고 가정한다.
 
 ## Source
 
-A pairing session with Phil Battos at gSchool [http://gschool.it](http://gschool.it)
+```
+class GradeSchool {
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+    var roster: [Int:[String]] = [:]
+
+    var sortedRoster: [Int:[String]] {
+        get {
+            /* write your code here */
+        }
+    }
+
+    func addStudent(_ name: String, grade: Int) {
+        /* write your code here */
+    }
+
+    func studentsInGrade(_ grade: Int) -> [String] {
+        /* write your code here */
+    }
+}
+```

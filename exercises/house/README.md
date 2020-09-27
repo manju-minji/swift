@@ -1,19 +1,10 @@
 # House
 
-Recite the nursery rhyme 'This is the House that Jack Built'.
+서양의 어린이집에서 불리는 노래인 'This is the House that Jack Built' 의 가사를 출력하는 클래스를 작성해 보자.
 
-> [The] process of placing a phrase of clause within another phrase of
-> clause is called embedding. It is through the processes of recursion
-> and embedding that we are able to take a finite number of forms (words
-> and phrases) and construct an infinite number of expressions.
-> Furthermore, embedding also allows us to construct an infinitely long
-> structure, in theory anyway.
+이 노래 가사는 다음과 같다.
 
-- [papyr.com](http://papyr.com/hypertextbooks/grammar/ph_noun.htm)
-
-The nursery rhyme reads as follows:
-
-```text
+```plain
 This is the house that Jack built.
 
 This is the malt
@@ -105,22 +96,15 @@ that ate the malt
 that lay in the house that Jack built.
 ```
 
-## Setup
+## Structure
 
-Go through the project setup instructions for Xcode using Swift:
+House 클래스를 작성한다.
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+다음 함수를 작성한다.
 
-Notably from the source directory:
+    class func recite() -> String 
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+'This is the House that Jack Built' 의 가사를 반환한다.
 
 ## Source
 
-British nursery rhyme [http://en.wikipedia.org/wiki/This_Is_The_House_That_Jack_Built](http://en.wikipedia.org/wiki/This_Is_The_House_That_Jack_Built)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.

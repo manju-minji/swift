@@ -33,18 +33,12 @@ You can check this yourself:
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 The Prime Factors Kata by Uncle Bob [http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

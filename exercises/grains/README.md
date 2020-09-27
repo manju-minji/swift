@@ -1,47 +1,56 @@
 # Grains
 
-Calculate the number of grains of wheat on a chessboard given that the number
-on each square doubles.
+옛날에 어느 나라의 왕자의 목숨을 현명한 신하가 구하였다. 왕은 그 신하가 원하는 것은 무엇이든 주겠다고 약속하였다. 그 신하는 왕이 체스를 좋아하는 것을 알았으므로, 다음과 같은 방법으로 곡물을 달라고 요구하였다.
 
-There once was a wise servant who saved the life of a prince. The king
-promised to pay whatever the servant could dream up. Knowing that the
-king loved chess, the servant told the king he would like to have grains
-of wheat. One grain on the first square of a chess board. Two grains on
-the next. Four on the third, and so on.
+첫번째 칸에는 1 개, 두번째 칸에는 2 개, 세번째 칸에는 4 개를 놓는다. 이와 같은 식으로 계속 2배씩 곡물의 개수를 늘려 다음 칸에 둔다. 그렇게 놓인 모든 곡물을 가져간다.
 
-There are 64 squares on a chessboard.
+체스판은 가로 세로 각각 8 칸씩, 총 64칸으로 되어 있다.
 
-Write code that shows:
-- how many grains were on each square, and
-- the total number of grains
+주어진 칸에 대하여, 그 칸에 놓일 곡물의 개수를 계산하고, 또한 체스판에 놓인 전체 곡물의 개수를 계산하는 클래스를 작성하라.
 
-## For bonus points
+## Structure
 
-Did you get the tests passing and the code clean? If you want to, these
-are some additional things you could try:
+Grains 클래스를 작성한다. 
 
-- Optimize for speed.
-- Optimize for readability.
+다음 프로퍼티를 작성한다.
 
-Then please share your thoughts in a comment on the submission. Did this
-experiment make the code better? Worse? Did you learn anything from it?
+```
+class var total: Int
+```
 
-## Setup
+왕이 신하에게 주어야 할 곡물의 총 개수를 반환한다.
 
-Go through the project setup instructions for Xcode using Swift:
+다음 함수를 작성한다.
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+```
+class func square(_ location: Int) throws -> Int
+```
 
-Notably from the source directory:
+location 으로 칸의 위치가 주어지면, 그 칸에 놓일 곡물의 개수를 반환한다.
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+## Caution
 
+칸의 위치가 1 보다 작거나 64 보다 크면 체스판에 둘 수 없으므로, GrainError 를 반환한다.
+* inputTooHigh : 칸의 위치가 64 보다 큰 경우
+* inputTooLow : 칸의 위치가 1 보다 작은 경우
 
 ## Source
 
-JavaRanch Cattle Drive, exercise 6 [http://www.javaranch.com/grains.jsp](http://www.javaranch.com/grains.jsp)
+```
+class Grains {
+    class var total: Int {
+        get {
+            /* write your code here */
+        }
+    }
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+    class func square(_ location: Int) throws -> Int {
+        /* write your code here */
+    }
+}
+
+enum GrainsError: Error {
+    case inputTooLow
+    case inputTooHigh
+}
+```

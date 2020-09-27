@@ -1,47 +1,37 @@
 # Leap
 
-Given a year, report if it is a leap year.
+어떤 해가 주어졌을 때, 그 해가 윤년인지 아닌지를 판별할 수 있는 클래스를 작성하라.
 
-The tricky thing here is that a leap year in the Gregorian calendar occurs:
+우리가 사용하는 그레고리력에서 윤년이란, 다음과 같은 조건을 만족하는 해를 말한다.
 
-```text
-on every year that is evenly divisible by 4
-  except every year that is evenly divisible by 100
-    unless the year is also evenly divisible by 400
-```
+    4로 나누어 떨어지는 해.
+    단, 400으로 나누어 떨어지지 않으면서 100으로 나누어 떨어지는 해는 제외한다.
 
-For example, 1997 is not a leap year, but 1996 is.  1900 is not a leap
-year, but 2000 is.
+## Structure 
 
-If your language provides a method in the standard library that does
-this look-up, pretend it doesn't exist and implement it yourself.
+Year 클래스를 작성한다. 생성자를 통해 윤년인지 아닌지를 판별할 해를 전달받는다.
 
-## Notes
+    init(calendarYear: Int)
 
-Though our exercise adopts some very simple rules, there is more to
-learn!
+다음 프로퍼티를 작성한다.
 
-For a delightful, four minute explanation of the whole leap year
-phenomenon, go watch [this youtube video][video].
+    var isLeapYear: Bool
 
-[video]: http://www.youtube.com/watch?v=xX96xng7sAE
-
-## Setup
-
-Go through the project setup instructions for Xcode using Swift:
-
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+전달받은 해가 윤년인지 아닌지를 반환한다. 윤년이면 true, 아니면 false 를 반환한다.
 
 ## Source
 
-JavaRanch Cattle Drive, exercise 3 [http://www.javaranch.com/leap.jsp](http://www.javaranch.com/leap.jsp)
+    class Year {
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+        var calendarYear: Int
+
+        var isLeapYear: Bool {
+            get {
+                /* write your code here */
+            }
+        }
+
+        init(calendarYear: Int) {
+            self.calendarYear = calendarYear
+        }
+    }

@@ -1,61 +1,75 @@
 # Matrix
 
-Given a string representing a matrix of numbers, return the rows and columns of
-that matrix.
+어떤 행렬이 주어질 때, 그 행렬의 특정 행 혹은 열의 성분들을 출력해 줄 수 있는 클래스를 작성하라.
 
-So given a string with embedded newlines like:
+예를 들어 다음과 같이 세 줄로 숫자들이 주어진다면
 
-```text
-9 8 7
-5 3 2
-6 6 7
-```
+    > 9 8 7  
+    > 5 3 2  
+    > 6 6 7 
 
-representing this matrix:
+이는 아래와 같은 행렬을 나타내는 것이다.
 
-```text
-    0  1  2
-  |---------
-0 | 9  8  7
-1 | 5  3  2
-2 | 6  6  7
-```
+        0  1  2
+      |---------
+    0 | 9  8  7
+    1 | 5  3  2
+    2 | 6  6  7
 
-your code should be able to spit out:
+여기에서 1행의 성분은
 
-- A list of the rows, reading each row left-to-right while moving
-  top-to-bottom across the rows,
-- A list of the columns, reading each column top-to-bottom while moving
-  from left-to-right.
+    5, 3, 2
 
-The rows for our example matrix:
+0열의 성분은
 
-- 9, 8, 7
-- 5, 3, 2
-- 6, 6, 7
+    9, 5, 6
 
-And its columns:
+이 될 것이다.
 
-- 9, 5, 6
-- 8, 3, 6
-- 7, 2, 7
+## Structure
 
-## Setup
+Matrix 클래스를 작성한다. 생성자를 통해 행렬을 전달받는다.
 
-Go through the project setup instructions for Xcode using Swift:
+행렬은 다음과 같은 문자열의 형태로 전달받는다. 예를 들어
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+    "1 4 9\n16 25 36"
 
-Notably from the source directory:
+라면, 다음과 같은 행렬을 의미한다.
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+        0  1  2
+      |---------
+    0 | 1  4  9
+    1 | 16 25 36
 
+다음 프로퍼티들을 작성한다.
+
+    var rows: [[Int]]
+
+각 행별 성분들의 배열을 반환한다. 예를 들어 위의 행렬의 경우에는 [[1, 4, 9], [16, 25, 35]] 를 반환한다.
+
+    var columns: [[Int]]
+
+각 열별 성분들의 배열을 반환한다. 예를 들어 위의 행렬의 경우에는 [[1, 16], [4, 25], [9, 36]] 을 반환한다.
 
 ## Source
 
-Warmup to the `saddle-points` warmup. [http://jumpstartlab.com](http://jumpstartlab.com)
+    class Matrix {
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+        var matrix: [[Int]] // save the matrix here
+
+        var rows: [[Int]] {
+            get {
+                /* write your code here */
+            }
+        }
+
+        var columns: [[Int]] {
+            get {
+                /* write your code here */
+            }
+        }
+
+        init(_ matrix: String) {
+            /* write your code here */
+        }
+    }

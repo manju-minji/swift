@@ -14,7 +14,7 @@ The Romans wrote numbers using letters - I, V, X, L, C, D, M. (notice
 these letters have lots of straight lines and are hence easy to hack
 into stone tablets).
 
-```text
+```
  1  => I
 10  => X
  7  => VII
@@ -46,18 +46,12 @@ See also: http://www.novaroma.org/via_romana/numbers.html
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 The Roman Numeral Kata [http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals](http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

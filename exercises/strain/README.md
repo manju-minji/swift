@@ -1,9 +1,10 @@
 # Strain
 
-Implement the `keep` and `discard` operation on collections. Given a collection
-and a predicate on the collection's elements, `keep` returns a new collection
-containing those elements where the predicate is true, while `discard` returns
-a new collection containing those elements where the predicate is false.
+Implement the `keep` and `discard` operation on collections. Given a collection and a predicate on the collection's elements, `keep` returns a new collection containing those elements where the predicate is true, while `discard` returns a new collection containing those elements where the predicate is false.
+
+Write two functions that each take a function and a list.  One of them will
+return the list of items for which the passed in function is true, and the
+other will return the items for which it is false.
 
 For example, given the collection of numbers:
 
@@ -37,18 +38,12 @@ basic tools instead.
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 Conversation with James Edward Gray II [https://twitter.com/jeg2](https://twitter.com/jeg2)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

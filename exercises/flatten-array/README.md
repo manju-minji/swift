@@ -1,31 +1,15 @@
 # Flatten Array
 
-Take a nested list and return a single flattened list with all values except nil/null.
+여러 겹으로 구성된 배열을, nil 값을 제외하고 단순 배열로 바꾸는 클래스를 작성하라.
 
-The challenge is to write a function that accepts an arbitrarily-deep nested list-like structure and returns a flattened structure without any nil/null values.
+예를 들어, 다음과 같은 배열이 주어졌다고 하자.
 
-For Example
+[1,[2,3,nil,4],[nil],5]
 
-input: [1,[2,3,null,4],[null],5]
+이를 다음과 같이 변환해야 한다.
 
-output: [1,2,3,4,5]
+[1,2,3,4,5]
 
-## Setup
-
-Go through the project setup instructions for Xcode using Swift:
-
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
-
+## Input
+## Output
 ## Source
-
-Interview Question [https://reference.wolfram.com/language/ref/Flatten.html](https://reference.wolfram.com/language/ref/Flatten.html)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.

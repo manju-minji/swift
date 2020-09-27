@@ -1,80 +1,98 @@
 # Kindergarten Garden
 
-Given a diagram, determine which plants each child in the kindergarten class is
-responsible for.
+어느 유치원 수업에서, 식물을 기르는 법에 대해 가르치고 있다. 선생님들은 배우기만 하는 것 보다 진짜 흙에 진짜 식물을 씨를 심어 키워 보는 것이 더 좋다고 생각한다.
 
-The kindergarten class is learning about growing plants. The teacher
-thought it would be a good idea to give them actual seeds, plant them in
-actual dirt, and grow actual plants.
+심을 수 있는 식물은 잔디 grass, 토끼풀 clover, 무 radishes, 제비꽃 violets 네 가지 종류가 있다.
 
-They've chosen to grow grass, clover, radishes, and violets.
+정원을 만들기 위해, 창틀 가까이에 스티로폼 컵들을 두 줄로 나열해 두고, 각각의 컵에 무작위로 하나씩의 식물을 심는다.
 
-To this end, the children have put little cups along the window sills, and
-planted one type of plant in each cup, choosing randomly from the available
-types of seeds.
+다음과 같은 모양이 된다.
 
-```text
+```plain
 [window][window][window]
-........................ # each dot represents a cup
+........................ # 각각의 점은 하나의 컵을 의미
 ........................
 ```
 
-There are 12 children in the class:
+수업에는 12명의 아이들이 있다.
 
-- Alice, Bob, Charlie, David,
-- Eve, Fred, Ginny, Harriet,
-- Ileana, Joseph, Kincaid, and Larry.
+* Alice, Bob, Charlie, David, Eve, Fred, Ginny, Harriet, Ileana, Joseph, Kincaid, Larry.
 
-Each child gets 4 cups, two on each row. Their teacher assigns cups to
-the children alphabetically by their names.
+아이들은 각자 이름의 알파벳 순으로 위 아래 각 줄에서 왼쪽부터 2개씩, 총 4개의 컵을 배정받는다. 그 컵에 심어진 식물을 키우게 된다. 
 
-The following diagram represents Alice's plants:
+예를 들어, Alice 의 경우 이름이 첫번째이므로 윗 줄 가장 왼쪽 2개와 아랫 줄 가장 왼쪽 2개를 배정받는다. 정원은 다음과 같은 모양이 될 것이다.
 
-```text
+```plain
 [window][window][window]
 VR......................
 RG......................
 ```
 
-In the first row, nearest the windows, she has a violet and a radish.  In the
-second row she has a radish and some grass.
+윗 줄 2개에는 제비꽃과 무, 아랫 줄 2개에는 무와 잔디가 심어진 것을 나타낸 것이다.
 
-Your program will be given the plants from left-to-right starting with
-the row nearest the windows. From this, it should be able to determine
-which plants belong to each student.
+정원이 상황이 주어질 때, 어떤 아이가 어떤 식물들을 키우는지 알 수 있는 클래스를 작성하라. 이때, 아이들이 바뀔 경우를 대비하여, 다른 아이들의 목록이 주어졌을 때도 같은 작업을 수행할 수 있도록 하여야 한다.
 
-For example, if it's told that the garden looks like so:
+## Structure
 
-```text
-[window][window][window]
-VRCGVVRVCGGCCGVRGCVCGCGV
-VRCCCGCRRGVCGCRVVCVGCGCV
-```
+정원의 상황은 예를 들어 다음과 같이 문자열로 표시한다.
 
-Then if asked for Alice's plants, it should provide:
+    "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"
 
-- Violets, radishes, violets, radishes
+이는 
 
-While asking for Bob's plants would yield:
+    [window][window][window]
+    VRCGVVRVCGGCCGVRGCVCGCGV
+    VRCCCGCRRGVCGCRVVCVGCGCV
 
-- Clover, grass, clover, clover
+를 표시한 것이다.
 
-## Setup
+Garden 클래스를 작성한다.
 
-Go through the project setup instructions for Xcode using Swift:
+다음 생성자들을 작성한다.
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+    init(_ garden: String)
 
-Notably from the source directory:
+garden 으로 주어지는 정원의 상황에 대해 12 명의 아이들이 각각 관리할 식물들을 알 수 있는 클래스로 초기화한다.
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+    init(_ garden: String, children: [String])
 
+위의 생성자와 같은 기능을 수행하지만, 12명의 아이들 대신 children 으로 전달받은 아이들의 이름에 따라 클래스를 초기화한다.
+
+다음 함수를 작성한다.
+
+    func plantsForChild(_ name: String) -> [Plants]
+
+name 으로 주어진 아이가 키울 4개의 식물을 반환한다.
+
+Plant 열거형을 작성한다.
+
+다음 네 가지 요소를 갖추어야 한다.
+
+* Grass
+* Clover
+* Radishes
+* Violets
 
 ## Source
 
-Random musings during airplane trip. [http://jumpstartlab.com](http://jumpstartlab.com)
+    class Garden {
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+        init(_ garden: String) {
+            /* write your code here */
+        }
+
+        init(_ garden: String, children: [String]) {
+            /* write your code here */
+        }
+
+        func plantsForChild(_ name: String) -> [Plants] {
+            /* write your code here */
+        }
+    }
+
+    enum Plants {
+        case Grass
+        case Violets
+        case Clover
+        case Radishes
+    }

@@ -1,6 +1,6 @@
 # Pig Latin
 
-Implement a program that translates from English to Pig Latin.
+Implement a program that translates from English to Pig Latin
 
 Pig Latin is a made-up children's language that's intended to be
 confusing. It obeys a few simple rules (below), but when it's spoken
@@ -21,18 +21,12 @@ See <http://en.wikipedia.org/wiki/Pig_latin> for more details.
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 The Pig Latin exercise at Test First Teaching by Ultrasaurus [https://github.com/ultrasaurus/test-first-teaching/blob/master/learn_ruby/pig_latin/](https://github.com/ultrasaurus/test-first-teaching/blob/master/learn_ruby/pig_latin/)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

@@ -1,12 +1,14 @@
 # Secret Handshake
 
+Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.
+
 > There are 10 types of people in the world: Those who understand
 > binary, and those who don't.
 
 You and your fellow cohort of those in the "know" when it comes to
 binary decide to come up with a secret "handshake".
 
-```text
+```
 1 = wink
 10 = double blink
 100 = close your eyes
@@ -15,8 +17,6 @@ binary decide to come up with a secret "handshake".
 
 10000 = Reverse the order of the operations in the secret handshake.
 ```
-
-Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.
 
 Here's a couple of examples:
 
@@ -32,18 +32,12 @@ has caused the array to be reversed.
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
-Bert, in Mary Poppins [http://www.imdb.com/title/tt0058331/quotes/qt0437047](http://www.imdb.com/title/tt0058331/quotes/qt0437047)
+Bert, in Mary Poppins [http://www.imdb.com/character/ch0011238/quotes](http://www.imdb.com/character/ch0011238/quotes)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

@@ -1,8 +1,8 @@
 # Twelve Days
 
-Output the lyrics to 'The Twelve Days of Christmas'.
+Output the lyrics to 'The Twelve Days of Christmas'
 
-```text
+```ruby
 On the first day of Christmas my true love gave to me, a Partridge in a Pear Tree.
 
 On the second day of Christmas my true love gave to me, two Turtle Doves, and a Partridge in a Pear Tree.
@@ -32,18 +32,12 @@ On the twelfth day of Christmas my true love gave to me, twelve Drummers Drummin
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 Wikipedia [http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)](http://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song))
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

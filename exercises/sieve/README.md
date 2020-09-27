@@ -1,7 +1,6 @@
 # Sieve
 
-Use the Sieve of Eratosthenes to find all the primes from 2 up to a given
-number.
+Use the Sieve of Eratosthenes to find all the primes from 2 up to a given number.
 
 The Sieve of Eratosthenes is a simple, ancient algorithm for finding all
 prime numbers up to any given limit. It does so by iteratively marking as
@@ -31,18 +30,12 @@ correct list of primes.
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 Sieve of Eratosthenes at Wikipedia [http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

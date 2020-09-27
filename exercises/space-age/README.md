@@ -1,5 +1,7 @@
 # Space Age
 
+Given an age in seconds, calculate how old someone is in terms of a given planet's solar years.
+
 Given an age in seconds, calculate how old someone would be on:
 
    - Earth: orbital period 365.25 Earth days, or 31557600 seconds
@@ -12,7 +14,7 @@ Given an age in seconds, calculate how old someone would be on:
    - Neptune: orbital period 164.79132 Earth years
 
 So if you were told someone were 1,000,000,000 seconds old, you should
-be able to say that they're 31.69 Earth-years old.
+be able to say that they're 31 Earth-years old.
 
 If you're wondering why Pluto didn't make the cut, go watch [this
 youtube video](http://www.youtube.com/watch?v=Z_2gbGXzFbs).
@@ -21,18 +23,12 @@ youtube video](http://www.youtube.com/watch?v=Z_2gbGXzFbs).
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 Partially inspired by Chapter 1 in Chris Pine's online Learn to Program tutorial. [http://pine.fm/LearnToProgram/?Chapter=01](http://pine.fm/LearnToProgram/?Chapter=01)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

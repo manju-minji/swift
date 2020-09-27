@@ -2,10 +2,11 @@
 
 Tally the results of a small football competition.
 
-Based on an input file containing which team played against which and what the
-outcome was, create a file with a table like this:
+Tally the results of a small football competition. Based on an input file
+containing which team played against which and what the outcome was
+create a file with a table like this:
 
-```text
+```
 Team                           | MP |  W |  D |  L |  P
 Devastating Donkeys            |  3 |  2 |  1 |  0 |  7
 Allegoric Alaskans             |  3 |  2 |  0 |  1 |  6
@@ -31,7 +32,7 @@ Input
 
 Your tallying program will receive input that looks like:
 
-```text
+```
 Allegoric Alaskans;Blithering Badgers;win
 Devastating Donkeys;Courageous Californians;draw
 Devastating Donkeys;Allegoric Alaskans;win
@@ -42,7 +43,7 @@ Allegoric Alaskans;Courageous Californians;win
 
 The result of the match refers to the first team listed. So this line
 
-```text
+```
 Allegoric Alaskans;Blithering Badgers;win
 ```
 
@@ -50,7 +51,7 @@ Means that the Allegoric Alaskans beat the Blithering Badgers.
 
 This line:
 
-```text
+```
 Courageous Californians;Blithering Badgers;loss
 ```
 
@@ -58,24 +59,25 @@ Means that the Blithering Badgers beat the Courageous Californians.
 
 And this line:
 
-```text
+```
 Devastating Donkeys;Courageous Californians;draw
 ```
 
 Means that the Devastating Donkeys and Courageous Californians tied.
 
+Your program should only process input lines that follow this format.
+All other lines should be ignored:
+If an input contains both valid and invalid input lines,
+output a table that contains just the results from the valid lines.
+
 ## Setup
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+http://exercism.io/languages/swift
 
 
-## Submitting Incomplete Solutions
+
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

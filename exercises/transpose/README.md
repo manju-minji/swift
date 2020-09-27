@@ -1,17 +1,19 @@
 # Transpose
 
+Take input text and output it transposed.
+
 Given an input text output it transposed.
 
 Roughly explained, the transpose of a matrix:
 
-```text
+```
 ABC
 DEF
 ```
 
 is given by:
 
-```text
+```
 AD
 BE
 CF
@@ -26,14 +28,14 @@ If the input has rows of different lengths, this is to be solved as follows:
 
 Therefore, transposing this matrix:
 
-```text
+```
 ABC
 DE
 ```
 
 results in:
 
-```text
+```
 AD
 BE
 C
@@ -41,39 +43,32 @@ C
 
 And transposing:
 
-```text
+```
 AB
 DEF
 ```
 
 results in:
 
-```text
+```
 AD
 BE
  F
 ```
 
 In general, all characters from the input should also be present in the transposed output.
-That means that if a column in the input text contains only spaces on its bottom-most row(s),
+That means that if a column in the input text contains only spaces on its bottom-most row(s), 
 the corresponding output row should contain the spaces in its right-most column(s).
-
 ## Setup
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 Reddit r/dailyprogrammer challenge #270 [Easy]. [https://www.reddit.com/r/dailyprogrammer/comments/4msu2x/challenge_270_easy_transpose_the_input_text](https://www.reddit.com/r/dailyprogrammer/comments/4msu2x/challenge_270_easy_transpose_the_input_text)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

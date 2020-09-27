@@ -1,7 +1,6 @@
 # Series
 
-Given a string of digits, output all the contiguous substrings of length `n` in
-that string.
+Given a string of digits, output all the contiguous substrings of length `n` in that string.
 
 For example, the string "49142" has the following 3-digit series:
 
@@ -24,18 +23,12 @@ in the input; the digits need not be *numerically consecutive*.
 
 Go through the project setup instructions for Xcode using Swift:
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
-
-Notably from the source directory:
-
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
-
+http://exercism.io/languages/swift
 
 ## Source
 
 A subset of the Problem 8 at Project Euler [http://projecteuler.net/problem=8](http://projecteuler.net/problem=8)
 
-## Submitting Incomplete Solutions
+## Submitting Incomplete Problems
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+

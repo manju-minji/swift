@@ -1,25 +1,21 @@
 # Gigasecond
 
-Calculate the moment when someone has lived for 10^9 seconds.
+Gigasecond 는 10^9 초를 의미한다.
 
-A gigasecond is 10^9 (1,000,000,000) seconds.
+어떤 시점이 주어질 때, 그 시점으로부터 Gigasecond 이후의 시점을 계산하는 클래스를 작성하라.
 
-## Setup
+예를 들어, 
 
-Go through the project setup instructions for Xcode using Swift:
+2011-04-25T00:00:00
 
-http://exercism.io/languages/swift  
-http://exercism.io/languages/swift/tests
+라는 시점이 주어지면, Gigasecond 이후는
 
-Notably from the source directory:
+2043-01-01T01:46:40
 
-`swift test` runs tests  
-`swift package generate-xcodeproj` creates an Xcode project
+가 된다.
 
+## Input
+
+## Output
 
 ## Source
-
-Chapter 9 in Chris Pine's online Learn to Program tutorial. [http://pine.fm/LearnToProgram/?Chapter=09](http://pine.fm/LearnToProgram/?Chapter=09)
-
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
